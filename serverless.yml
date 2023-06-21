@@ -1,0 +1,30 @@
+service: lorawan-weight-measurement
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+  memorySize: 128
+  environment:
+    MQTT_ENDPOINT: a5gbwc66yvygj-ats.iot.eu-west-1.amazonaws.com
+    REGION: eu-west-1
+  iam:
+    role:
+      name: rawMeasurementLambdaRole
+      statements:
+        - Effect: Allow
+          Action:
+            - iot:*
+          Resource:
+            - '*'
+
+functions:
+  raw-measurement-processor:
+    handler: index.handler
+    events:
+      - iot:
+          sql: SELECT * FROM 'measurements/raw'
+          name: rawMeasumentProcessor
+          enabled: true
+          description: Process raw measument data
