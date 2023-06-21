@@ -1,0 +1,18 @@
+{
+  "name": "enless-lorawan-codec",
+  "version": "1.0.5",
+  "description": "Decoder for enless LoRaWAN data frames.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Codec",
+    "LoRaWAN"
+  ],
+  "author": "Ing. Peter Stepan",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  }
+}

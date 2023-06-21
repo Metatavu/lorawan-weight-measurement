@@ -1,0 +1,11 @@
+{
+  "name": "lorawan-weight-measurement",
+  "version": "0.1.0",
+  "description": "An AWS lambda to interpret the results of a LoraWAN scale",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": ""
+}
